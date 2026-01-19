@@ -1,0 +1,20 @@
+<h2>Consulta de Usuario REST</h2>
+
+<input
+  type="text"
+  placeholder="Ingrese la cédula"
+  [(ngModel)]="cedula"
+/>
+
+<button (click)="buscarUsuario()">Buscar</button>
+
+<div *ngIf="usuario">
+  <p><strong>Nombres:</strong> {{ usuario.nombres }}</p>
+  <p><strong>Apellidos:</strong> {{ usuario.apellidos }}</p>
+  <p><strong>Correo:</strong> {{ usuario.correo }}</p>
+  <p><strong>Teléfono:</strong> {{ usuario.telefono }}</p>
+  <p><strong>Dirección:</strong> {{ usuario.direccion }}</p>
+</div>
+
+<p style="color:red">{{ mensaje }}</p>
+
